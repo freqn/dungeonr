@@ -20,4 +20,5 @@ x = Dungeon.new("Tom Spirk")
 puts x.player.name
 
 x.add_room(:largecave, "Large Cave", "a large cavernous cave", {:west => :smallcave})
+x.add_room(:smallcave, "Small Cave", "a small, claustrophobic cave", {:east => :largecave})
 
