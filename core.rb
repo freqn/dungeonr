@@ -30,7 +30,7 @@ class Dungeon
 	def go(direction)
 		puts "You go " + direction.to_s
 		@player.location = find_room_in_direction(direction)
-		show show_current_description
+		show_current_description
 	end
 
 	class Player
@@ -58,7 +58,7 @@ class Dungeon
 end
 
 # Create the main dungeon object
-my_dungeon = Dungeon.new("Tom Spirk")
+my_dungeon = Dungeon.new("Fred Bloggs")
 puts my_dungeon.player.name
 
 # Add rooms to the dungeon
@@ -69,3 +69,8 @@ my_dungeon.add_room(:warroom, "War Room", "a strategy room with an arsenal", {:w
 
 # Start the dungeon by placing the player in a large cave
 my_dungeon.start(:largecave)
+my_dungeon.go(:west) 
+my_dungeon.go(:south)
+my_dungeon.go(:east)
+
+
